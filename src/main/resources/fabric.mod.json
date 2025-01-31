@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "lookbehind",
+  "version": "${version}",
+  "name": "LookBehind",
+  "description": "A simple mod to look behind us while moving forward, just pressing a key",
+  "authors": ["RazrCraft"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/lookbehind/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.razrcraft.lookbehind.client.LookBehindClient"
+    ],
+    "main": [
+      "net.razrcraft.lookbehind.LookBehind"
+    ]
+  },
+  "mixins": [
+    "lookbehind.mixins.json",
+    {
+      "config": "lookbehind.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
